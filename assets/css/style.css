@@ -1,0 +1,372 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  /* min-height: 3000px; */
+  color: #fff;
+  background-color: #000000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background: #00000085;
+  padding: 1.5rem 7%;
+  border-bottom: 1px solid #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffff;
+}
+.navbar .navbar-logo span {
+  color: #d48926;
+  font-style: italic;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: #d48926;
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #d48926;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: #000000;
+}
+
+.navbar-extra {
+  display: none;
+}
+
+#hamburger {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://media.istockphoto.com/id/513120936/photo/fried-chicken-drumstick-on-the-wooden-background.jpg?s=612x612&w=0&k=20&c=JLhKTMRyy29uWH27v6972DA6by57iN7SVd-biO6q_x0=);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.hero main {
+  padding: 10%;
+}
+.hero span {
+  color: #d48926;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 0.4rem;
+}
+.hero h2 {
+  font-size: 22px;
+}
+.hero h3 {
+  font-size: 20px;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  width: 55%;
+}
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: transparent;
+  border: 1.6px solid #d48926;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.about,
+.menu,
+.contact {
+  margin: 8rem 7% 1.4rem;
+}
+.about h2,
+.menu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+  color: #d48926;
+}
+.about .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.about .about-img img {
+  width: 100%;
+}
+.about h3 {
+  color: #d48926;
+  font-size: 1.6rem;
+}
+.about p {
+  font-size: 1.2rem;
+  text-indent: 18px;
+}
+.menu p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.menu h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 3rem;
+}
+.menu .menu-card {
+  text-align: center;
+}
+.menu .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+.row-contact {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+.row-contact .maps {
+  flex: 1 1 40rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.maps iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.row-contact form {
+  flex: 1 1 45rem;
+  object-fit: cover;
+  width: 100%;
+}
+.contact .row-contact form {
+  flex: 1 1 45rem;
+  padding: 2rem 5rem;
+  margin: auto;
+  text-align: center;
+}
+.input-group {
+  display: flex;
+  background: #000000;
+  align-items: center;
+  margin: auto 1rem 2rem;
+  padding: 0 1rem;
+  border: 1px solid #fff;
+}
+
+.input-group i {
+  font-size: 2rem;
+}
+.row-contact form input {
+  width: 100%;
+  background: none;
+  color: #fff;
+  padding: 1rem 1.2rem;
+}
+.contact .row-contact form .btn {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #d48926;
+  cursor: pointer;
+}
+footer {
+  background-color: #d48926;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+  font-size: 2rem;
+}
+footer .socials a:hover,
+footer .links a:hover {
+  color: #000000;
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  color: #000000;
+  font-weight: bold;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* media quires */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar-extra {
+    display: inline-block;
+  }
+
+  .navbar-nav {
+    display: block;
+    right: -100%;
+    width: 25rem;
+    position: absolute;
+    top: 100%;
+    height: 100vh;
+    background: #000000;
+    transition: 0.3s linear;
+  }
+
+  .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  #hamburger {
+    color: #fff;
+    font-size: 2rem;
+    display: inline-block;
+  }
+
+  .about .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+.contact .row-contact {
+  flex-wrap: wrap;
+}
+.contact .row-contact .maps {
+  height: 30rem;
+}
+.contact .row-contact form {
+  padding-top: 0;
+  margin-top: 2.5rem;
+}
